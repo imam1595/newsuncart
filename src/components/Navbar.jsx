@@ -1,10 +1,14 @@
-
+'use client'
 import Link from 'next/link';
 import React from 'react';
 import { CiSun } from "react-icons/ci";
 import NavLink from './NavLink';
+import { authClient } from '@/lib/auth-client';
 
 const Navbar = () => {
+    const userData = authClient.useSession();
+    console.log(userData)
+    
     return (
         <div className='min-h-[10vh] container mx-auto shadow p-3 flex flex-col text-center space-y-5 md:flex-row justify-between items-center bg-[#fff7ed]'>
 
