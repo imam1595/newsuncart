@@ -37,6 +37,13 @@ const RegisterPage = () => {
         
     };
 
+
+    const handleGoogle = async () => {
+        await authClient.signIn.social({
+            provider: 'google'
+        })
+    }
+
     return (
         <div className='flex justify-center mt-10 mb-10'>
 
@@ -60,7 +67,7 @@ const RegisterPage = () => {
 
                     <h1>Already have an account? <Link href={'/login'}><span className='text-[#f59e0b]'>Login</span></Link></h1>
 
-                    <button className='btn bg-[#f59e0b] flex items-center rounded mt-4 border-t-slate-400'>
+                    <button type="button" onClick={handleGoogle} className='btn bg-[#f59e0b] flex items-center rounded mt-4 border-t-slate-400'>
                         <FaGoogle />
                         Continue with Google
                     </button>

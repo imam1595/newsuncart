@@ -2,6 +2,7 @@
 import { authClient } from '@/lib/auth-client';
 import Link from 'next/link';
 import React from 'react';
+import { FaGoogle } from 'react-icons/fa6';
 
 
 const LoginPage = () => {
@@ -24,6 +25,12 @@ const LoginPage = () => {
             
         };
 
+        const handleGoogle = async () => {
+            await authClient.signIn.social({
+                provider: 'google'
+            })
+        }
+
     return (
         <div className='flex justify-center mt-10 mb-10'>
         
@@ -42,6 +49,11 @@ const LoginPage = () => {
                     <button className="btn bg-[#f59e0b] mt-4">SignIn</button>
 
                     <h1>To get an account? <Link href={'/register'}><span className='text-[#f59e0b]'>Register</span></Link></h1>
+
+                    <button type="button" onClick={handleGoogle} className='btn bg-[#f59e0b] flex items-center rounded mt-4 border-t-slate-400'>
+                        <FaGoogle />
+                        Continue with Google
+                    </button>
 
                     
                 </fieldset>
