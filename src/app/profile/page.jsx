@@ -1,4 +1,5 @@
 'use client'
+import UpdateProfile from '@/components/UpdateProfile';
 import { authClient } from '@/lib/auth-client';
 import Image from 'next/image';
 import React from 'react';
@@ -13,6 +14,9 @@ const ProfilePage = () => {
     return (
         <div className='border-slate-400 flex flex-col items-center p-10 mt-10 mb-10 shadow-sm'>
             
+
+            <UpdateProfile />
+
             <div className='font-bold text-2xl'>{user?.name}</div>
 
             <div className='text-xl'>{user?.email}</div>
@@ -38,6 +42,8 @@ const ProfilePage = () => {
                     }
                     
                 </div>
+
+                
 
                 
             </div>
