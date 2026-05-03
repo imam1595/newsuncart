@@ -17,7 +17,7 @@ const ProfilePage = () => {
 
             <UpdateProfile />
 
-            <div className='font-bold text-2xl'>{user?.name}</div>
+            <div className='font-bold text-2xl mt-5'>{user?.name}</div>
 
             <div className='text-xl'>{user?.email}</div>
 
