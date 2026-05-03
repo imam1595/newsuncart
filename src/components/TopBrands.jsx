@@ -9,7 +9,7 @@ const TopBrands = () => {
     return (
         <div className='space-y-5 mt-10'>
 
-            <h1 className='font-bold text-2xl text-accent flex items-center gap-3'>
+            <h1 className='font-bold text-2xl text-accent flex items-center gap-3 p-3 mb-5 shadow-sm'>
                 Top Brands
                 <SiBrandfolder />
             </h1>

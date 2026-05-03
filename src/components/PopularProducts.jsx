@@ -15,7 +15,7 @@ const PopularProducts = async () => {
         <div>
             <div className='flex justify-between items-center mb-10 mt-10 shadow-sm p-2 border-slate-500'>
                 <h1 className='font-bold md:text-2xl'>Popular Products</h1>
-                <Link href={'/products'}><button className='btn'>See More</button></Link>
+                <Link href={'/products'}><button className='btn bg-[#f59e0b]'>See More</button></Link>
             </div>
             <div className='grid grid-cols-1 gap-10 md:grid-cols-3 '>
                 {

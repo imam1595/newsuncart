@@ -7,7 +7,7 @@ import { MdOutlineTipsAndUpdates } from "react-icons/md";
 const CareTips = () => {
     return (
         <div className='space-y-5 mt-10'>
-            <h1 className='font-bold text-2xl text-accent flex items-center gap-3'>
+            <h1 className='font-bold text-2xl text-accent flex items-center gap-3 shadow-sm mb-5 p-3'>
                 Summer Care Tips
                 <MdOutlineTipsAndUpdates />
             </h1>

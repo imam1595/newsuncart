@@ -52,7 +52,7 @@ const ProductCard = ({one}) => {
                     </h1>
                 </div>
 
-                <Link href={`/products/${one.id}`}><button className='btn btn-outline w-full rounded-xl'>View Details</button></Link>
+                <Link href={`/products/${one.id}`}><button className='btn bg-[#f59e0b] w-full rounded-xl'>View Details</button></Link>
             </div>
         </div>
     );
