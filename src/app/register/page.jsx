@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import React from 'react';
 import { FaGoogle } from "react-icons/fa";
+import { toast } from 'react-toastify';
 
 
 const RegisterPage = () => {
@@ -30,8 +31,17 @@ const RegisterPage = () => {
 
         // console.log({data, error});
 
-        if(!error) {
+        // if(!error) {
             
+        //     route.push('/');
+        // }
+        
+
+        if (error) {
+            toast.error(error.message || 'register failed!');
+            return;
+        } else {
+            toast.success('register successful! 🎉');
             route.push('/');
         }
         

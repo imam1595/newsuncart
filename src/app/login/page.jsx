@@ -3,6 +3,7 @@ import { authClient } from '@/lib/auth-client';
 import Link from 'next/link';
 import React from 'react';
 import { FaGoogle } from 'react-icons/fa6';
+import { toast } from 'react-toastify';
 
 
 const LoginPage = () => {
@@ -22,6 +23,15 @@ const LoginPage = () => {
             })
     
             // console.log({data, error});
+
+            if (error) {
+                toast.error(error.message || 'Login failed!');
+                return;
+            } else {
+                toast.success('Login successful! Welcome back 🎉');
+            }
+
+                
             
         };
 
